@@ -1,0 +1,85 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "uk.ac.tees.aad.a0333230"
+        minSdkVersion 22
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures{
+        viewBinding true 
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'com.google.firebase:firebase-crashlytics:18.2.8'
+    implementation 'com.google.firebase:firebase-analytics:20.1.0'
+
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+
+    //country code picker
+    implementation 'com.hbb20:ccp:2.5.4'
+
+    implementation 'io.github.chaosleung:pinview:1.4.4'
+
+    implementation 'com.github.smarteist:autoimageslider:1.4.0'
+
+
+
+    // firebase
+    //if you want to update these libraries first you have to convert the project to androidX
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'
+    implementation 'com.google.android.gms:play-services-location:19.0.1'
+    implementation 'com.google.firebase:firebase-auth:21.0.1'
+    implementation 'com.google.firebase:firebase-firestore:24.0.1'
+    implementation 'com.google.firebase:firebase-storage:20.0.0'
+
+    implementation('com.google.android.libraries.places:places:2.5.0') { exclude module: 'glide' }
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+
+    implementation 'com.melnykov:floatingactionbutton:1.3.0'
+    implementation 'com.google.code.gson:gson:+'
+    implementation 'com.github.navasmdc:MaterialDesign:1.+@aar'
+    // PERMISION
+    implementation 'com.karumi:dexter:6.2.3'
+
+//    implementation 'com.github.ibrahimsn98:speedometer:1.0.1'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'in.unicodelabs.sorbh:kdgaugeview:1.0.0'
+//    implementation project (":gaugelibrary")
+}
