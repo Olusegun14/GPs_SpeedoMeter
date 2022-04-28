@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity  {
         binding.tabLayout.setupWithViewPager(binding.viewPager);
         setupViewPager(binding.viewPager);
 
-
+int s;
     }
 
 
